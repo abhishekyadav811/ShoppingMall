@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creative Shopping Mall</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Creative Shopping Mall 🛒</h1>
+  <nav>
+    <a href="#clothing">Clothing</a>
+    <a href="#food">Food</a>
+    <a href="#medicine">Medicine</a>
+    <a href="#cart">Cart</a>
+  </nav>
+</header>
+
+<section id="clothing">
+  <h2>Clothing🧥 👖 👕</h2>
+  <div class="product-grid">
+    <div class="product" onclick="addToCart('T-Shirt', 600, 20)">
+      <img src="T-shirt (2).jpg" alt="T-Shirt">
+      <p>T-Shirt<br>₹600 - 20% Off</p>
+    </div>
+    <div class="product" onclick="addToCart('Shirt', 800, 15)">
+      <img src="shirt (2).jpg" alt="Shirt">
+      <p>Shirt<br>₹800 - 15% Off</p>
+    </div>
+    <div class="product" onclick="addToCart('Jeans', 1200, 25)">
+      <img src="Blue Jeans.jpg" alt="Jeans">
+      <p>Jeans<br>₹1200 - 25% Off</p>
+    </div>
+    <div class="product" onclick="addToCart('Pants', 1000, 10)">
+      <img src="Pants.jpg" alt="Pants">
+      <p>Pants<br>₹1000 - 10% Off</p>
+    </div>
+  </div>
+</section>
+
+<section id="food">
+  <h2>Food 🍕</h2>
+  <div class="product-grid">
+    <div class="product" onclick="addToCart('Pizza', 300, 10)">
+      <img src="Pizza.jpg" alt="Pizza">
+      <p>Pizza<br>₹300 - 10% Off</p>
+    </div>
+    <div class="product" onclick="addToCart('Burger', 150, 5)">
+      <img src="Burger.jpg" alt="Burger">
+      <p>Burger<br>₹150 - 5% Off</p>
+    </div>
+    <div class="product" onclick="addToCart('Sandwich', 100, 8)">
+      <img src="Sandwich.jpg" alt="Sandwich">
+      <p>Sandwich<br>₹100 - 8% Off</p>
+    </div>
+    <div class="product" onclick="addToCart('Juice', 80, 12)">
+      <img src="Juice.jpg" alt="Juice">
+      <p>Juice<br>₹80 - 12% Off</p>
+    </div>
+  </div>
+</section>
+
+<section id="medicine">
+  <h2>Medicine 🏥</h2>
+  <div class="product-grid">
+    <div class="product" onclick="addToCart('Paracetamol 500mg', 50, 10)">
+      <img src="paracetamol.jpg" alt="Paracetamol 500mg">
+      <p>Paracetamol 500mg<br>₹50 - 10% Off</p>
+    </div>
+    <div class="product" onclick="addToCart('Pain Relief', 120, 15)">
+      <img src="pain relief.jpg" alt="Pain Relief">
+      <p>Pain Relief<br>₹120 - 15% Off</p>
+    </div>
+    <div class="product" onclick="addToCart('Durex Condoms', 90, 12)">
+      <img src="Durex Condoms.jpg" alt="Durex Condoms">
+      <p>Durex Condoms<br>₹180 - 12% Off</p>
+    </div>
+    <div class="product" onclick="addToCart('Cough Syrup', 110, 18)">
+      <img src="Cough Syrup.jpg" alt="Cough Syrup">
+      <p>Cough Syrup<br>₹110 - 18% Off</p>
+    </div>
+  </div>
+</section>
+
+<section id="cart">
+  <h2>Cart</h2>
+  <div id="cartItems"></div>
+  <div id="cartSummary"></div>
+
+  <form id="addressForm" onsubmit="submitOrder(event)">
+    <h3>Delivery Address</h3>
+    <label>Name: <input type="text" id="name" required></label><br>
+    <label>Address: <textarea id="address" required></textarea></label><br>
+    <label>Phone: <input type="tel" id="phone" required></label><br>
+
+    <h4>Payment Method</h4>
+    <label><input type="radio" name="payment" value="UPI" required> UPI</label>
+    <label><input type="radio" name="payment" value="Card"> Card</label>
+    <label><input type="radio" name="payment" value="Cash"> Cash </label><br>
+
+    <button type="submit">Place Order</button>
+  </form>
+
+  <div id="orderConfirmation"></div>
+</section>
+
+<footer>
+  <p>Follow us:</p>
+  <div class="social-icons">
+    <a href="https://instagram.com" target="_blank">Instagram</a> |
+    <a href="https://t.me" target="_blank">Telegram</a> |
+    <a href="https://twitter.com" target="_blank">Twitter</a>
+  </div>
+  <p>&copy; Creative Shopping Mall</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
